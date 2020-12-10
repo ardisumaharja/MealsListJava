@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DetailFoodActivity"
+    android:orientation="vertical">
+
+    // header
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtubePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:autoPlay="false"
+            app:showFullScreenButton="false"/>
+
+        <ImageView
+            android:id="@+id/imgFood"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="#80000000"
+            android:src="@android:drawable/ic_media_play" />
+
+
+        <RelativeLayout
+            android:id="@+id/containerMealsName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#80F40505"
+            android:paddingHorizontal="20dp">
+            <TextView
+                android:id="@+id/tvFoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meals Name"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    // body
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingVertical="5dp">
+
+        <include
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            layout="@layout/content_detail_food"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="INGREDIENTS"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:background="@color/colorRed"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="5dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingHorizontal="10dp"
+            android:id="@+id/rvIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>

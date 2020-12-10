@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.InstructionsFragments"
+    android:id="@+id/fragmentInstructions"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="5dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvInsructions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Instructions Page"
+            android:textSize="16dp"
+            android:textColor="@android:color/black"/>
+    </ScrollView>
+
+
+</FrameLayout>
